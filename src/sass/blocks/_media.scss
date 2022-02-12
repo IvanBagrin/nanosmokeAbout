@@ -1,0 +1,142 @@
+@media(max-width: 1200px) {
+    .preview {
+        &__wrap {
+
+        }
+    }
+    .sentence {
+        &__item {
+            height: 250px;
+        }
+    }
+    .partners {
+        &__wrap {
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(3, 200px);
+            gap: 15px;
+        }
+    }
+
+}
+
+@media(max-width: 992px) {
+    .arrow__wrap {
+        display: none;
+    }
+    .preview {
+        &__wrap {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 50px;
+        }
+    }
+    .benefits {
+        &__wrap {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .sentence {
+        &__item {
+            padding: 40px;
+            &_descr {
+                margin-top: 15px;
+            }
+        }
+    }
+    .test {
+        
+    }
+    .partners {
+        &__wrap {
+            grid-template-columns: repeat(10, 200px);
+            grid-template-rows: repeat(1, 200px);
+            gap: 15px;
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+    
+
+}
+
+@media(max-width: 768px) {
+    .page_title {
+        font-size: 34px;
+    }
+    .title {
+        font-size: 34px;
+    }
+    .arrow__wrap {
+        display: none;
+    }
+    .preview {
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    .baenefits {
+        padding: 30px 0;
+    }
+    .benefits {
+        &__wrap {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    .sentence {
+        padding: 30px 0;
+        &__item {
+            height: 250px;
+        }
+        &__wrap {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+        &__descr {
+            margin-top: 50px;
+        }
+    }
+    .prezentation {
+        padding: 30px 0;
+        &__wrap {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 220px);
+            row-gap: 30px;
+        }
+    }
+    .partners {
+        padding: 30px 0;
+    }
+    .cart {
+        padding: 30px 0;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .page_title {
+        font-size: 28px !important;
+    }
+    .title {
+        font-size: 28px !important;
+    }
+    .arrow__wrap {
+        display: none;
+    }
+    .preview {
+        &__wrap {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 30px;
+        }
+    }
+    .sentence {
+        &__descr {
+            padding: 20px 35px;
+        }
+    }
+    .prezentation {
+        &__wrap {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 220px);
+            row-gap: 20px;
+        }
+    }
+
+}
