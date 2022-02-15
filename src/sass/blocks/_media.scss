@@ -16,6 +16,26 @@
             gap: 15px;
         }
     }
+    .connection {
+        &__form {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            &_item:nth-child(3) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+        }
+        button {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item {
+            &_contactWrap {
+                height: 414px;
+            }
+        }
+        
+    }
 
 }
 
@@ -42,16 +62,29 @@
             }
         }
     }
-    .test {
-        
-    }
     .partners {
         &__wrap {
             grid-template-columns: repeat(10, 200px);
             grid-template-rows: repeat(1, 200px);
             gap: 15px;
             overflow-x: scroll;
+            overflow-y: hidden;
             width: 100%;
+        }
+    }
+    .connection {
+        &__title {
+            font-size: 20px;
+            width: 100%;
+        }
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            padding: 30px;
+            &_comment {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
         }
     }
     
@@ -71,6 +104,9 @@
     .preview {
         margin-top: 30px;
         padding-bottom: 30px;
+        &__descr {
+            padding: 0 10px;
+        }
     }
     .baenefits {
         padding: 30px 0;
@@ -107,6 +143,37 @@
     .cart {
         padding: 30px 0;
     }
+    .connection__contact_form{
+        display: none;   
+    }
+    .connection {
+        padding: 30px 0;
+        &__wrap {
+            grid-template-columns: 1fr;
+        }
+        &__form {
+            padding: 20px;
+        }
+        &__contact {
+            &_contactPhone {
+                font-size: 17px;
+            }
+            &_block {
+                display: block;
+                .connection__item_contactWrap {
+                    height: auto;
+                }
+                .connection__item_contactWrapper {
+                   display: grid;
+                   grid-template-columns: auto 1fr;
+                   .connection__item_contactText {
+                       margin-right: 10px;
+                   }
+                }
+            }
+        }
+    }
+    
 
 }
 
@@ -130,12 +197,31 @@
         &__descr {
             padding: 20px 35px;
         }
+        &__item {
+            height: auto;
+        }
     }
     .prezentation {
         &__wrap {
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(3, 220px);
             row-gap: 20px;
+        }
+    }
+    .connection {
+        &__contact {
+            &_block {
+                .connection__item_contactWrapper {
+                   grid-template-columns: 1fr;
+                   grid-template-rows: repeat(2, auto);
+                   .connection__item_contactText {
+                       margin-right: 10px;
+                   }
+                }
+                .connection__item_contactWrap {
+                    padding: 32px;
+                }
+            }
         }
     }
 
