@@ -1,3 +1,5 @@
+
+
 var REGIONS_DATA = {
     region: {
         title: 'Регион',
@@ -176,6 +178,78 @@ var RegionControlLayout = ymaps.templateLayoutFactory.createClass(optionsTemplat
             //     // {checkZoomRange: true}
             // );
             map.setZoom(2);
+            let coords= [
+                {
+                    country: 'Россия',
+                    coords: [61, 99]
+                },
+                {
+                    country: 'Япония',
+                    coords: [36.37203967248622,139.48256259219917]
+                },
+                {
+                    country: 'Казахстан',
+                    coords: [48.259194685638604,66.99239162499998]
+                },
+                {
+                    country: 'ОАЭ',
+                    coords: [23.571172673234525,54.057770656249936]
+                }, 
+                {
+                    country: 'Кувейт',
+                    coords: [29.311827753621326,47.78965899999998]
+                },
+                {
+                    country: 'Азербайджан',
+                    coords: [40.302606081412435,47.106557875]
+                },
+                {
+                    country: 'Украина',
+                    coords: [49.278785029426786,31.336178593749928]
+                },
+                {
+                    country: 'Турция',
+                    coords: [39.11692985837424,35.18497499999998]
+                },
+                {
+                    country: 'Беларусь',
+                    coords: [53.78897008769592,27.977432000000015]
+                },
+                {
+                    country: 'Чехия',
+                    coords: [49.820083277936746,15.47499449999997]
+                },
+                {
+                    country: 'Польша',
+                    coords: [52.103280550497686,19.134394]
+                },
+                {
+                    country: 'Германия',
+                    coords: [51.400605669555,10.454251999999979]
+                },
+                ]
+
+                coords.forEach(element => {
+                    var pl = new ymaps.Placemark(element.coords, {
+                        hintContent: element.country,
+                        // balloonContent: element.country,
+                    }, {
+                        // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: './js/placemark.svg',
+                    // Размеры метки.
+                    // iconImageSize: [30, 42],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    // iconImageOffset: [-5, -38]
+                        
+                    });
+                    map.geoObjects.add(pl);
+                });
+
+            
         },
 
         loadRegions: function (params) {
@@ -219,8 +293,41 @@ var RegionControlLayout = ymaps.templateLayoutFactory.createClass(optionsTemplat
    
 // Добавим контрол на карту.
 map.controls.add(regionControl);
+
+
 // Узнавать о изменениях параметров RegionControl можно следующим образом.
 regionControl.events.add('statechange', function (e) {
     console.log(e.get('target').get('values'));
 });
 }
+
+
+
+
+
+
+
+//------------------
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });

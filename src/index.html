@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nanosmoke</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
+    
 </head>
 <body>
     <section class="header">
@@ -208,15 +210,42 @@
         <div class="cont">
             <div class="prezentation__download">
                 <img src="./icons/svg/pdf.png" alt="" class="prezentation__download_img">
-                <a href="#" download class="prezentation__download_text">Посмотреть презентацию</a>
+                <a href="./docs/prezentation-doc.pdf" target="_blank"  class="prezentation__download_text">Посмотреть презентацию</a>
             </div>
+
             <div class="prezentation__wrap">
-                <div class="prezentation__item"></div>
-                <div class="prezentation__item"></div>
-                <div class="prezentation__item"></div>
+                <div class="prezentation__item"><img src="./img/prezentation/prezentation1.jpg" alt="prez" class=""></div>
+                <div class="prezentation__item"><img src="./img/prezentation/prezentation2.jpg" alt="prez" class=""></div>
+                <div class="prezentation__item"><img src="./img/prezentation/prezentation3.jpg" alt="prez" class=""></div>
+            </div>
+
+            <div id="prezentation-slider" class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="./img/prezentation/prezentation1.jpg" alt="prez" class=""></div>
+                  <div class="swiper-slide"><img src="./img/prezentation/prezentation2.jpg" alt="prez" class=""></div>
+                  <div class="swiper-slide"><img src="./img/prezentation/prezentation3.jpg" alt="prez" class=""></div>
+                  
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
             </div>
         </div>
     </section>
+
+    
+
+   
+
+
+
+
+
+
+
+
 
     <section class="partners">
         <div class="cont">
@@ -326,7 +355,7 @@
                                 id="comment" 
                                 placeholder="Ваш комментарий..." 
                                 name="comment" 
-                                class=""> </textarea>
+                                class=""></textarea>
                         </div>
                         <button type="submit" class="connection__form_item">отправить заявку</button>
                     </form>
@@ -375,9 +404,14 @@
 
 
     <script type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
-    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=0b5f959c-3ad8-4c6a-b787-6b5191bc0c0f&lang=ru_RU" type="text/javascript">
     </script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+      
+        
+      </script>
     <script src="js/script.js"></script>
 </body>
 </html>
